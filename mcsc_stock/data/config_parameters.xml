@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="mtrc_stock_production_lot_auth_token" model="ir.config_parameter">
+        <field name="key">auth_token</field>
+        <field name="value">Basic dDVpTW5zc0Y3NWsxMlpDT2x5b3Q1WkV2UDQ3cFhMNHFmNkN5aE1TYjc3TURpREY1OkdLNDgtdVNobklnbmtDWmE1Qnc3NDc0OUIyREZSQmU2OG1VMEZpb2lzUUlTNGdXMg==</field>
+    </record>
+    <record id="mtrc_stock_production_lot_license_number" model="ir.config_parameter">
+        <field name="key">licenseNumber</field>
+        <field name="value">404R-00176,404-00058</field>
+    </record>
+</odoo>

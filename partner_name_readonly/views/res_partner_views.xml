@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form_name_readonly" model="ir.ui.view">
+        <field name="name">res.partner.form.name.readonly</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="priority" eval="101" />
+        <field name="arch" type="xml">
+            <!-- Load field before name field for readonly condition -->
+            <xpath expr="//h1//field[@name='name']" position="before">
+                <field name="allow_name_edit" string="Allow Name Edit" invisible="0"/>
+            </xpath>
+            <!-- Make name field readonly based on checkbox -->
+            <xpath expr="//h1//field[@name='name']" position="attributes">
+                <attribute name="readonly">allow_name_edit == False</attribute>
+                <attribute name="required">type == 'contact'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']//form//field[@name='phone']" position="after">
+                <field name="category_id" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

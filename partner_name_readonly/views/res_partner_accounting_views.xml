@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- This view adds checkbox to accounting tab -->
+    <record id="view_partner_form_accounting_checkbox" model="ir.ui.view">
+        <field name="name">res.partner.form.accounting.checkbox</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='property_account_receivable_id']" position="before">
+                <field name="allow_name_edit" string="Allow Name Edit"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

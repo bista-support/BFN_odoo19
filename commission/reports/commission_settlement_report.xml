@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+     <record id="action_report_settlement" model="ir.actions.report">
+        <field name="name">Settlement report</field>
+        <field name="model">commission.settlement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">commission.report_settlement</field>
+        <field name="report_file">commission.report_settlement</field>
+        <field name="binding_model_id" ref="model_commission_settlement" />
+        <field name="binding_type">report</field>
+        <field name="print_report_name">'Settlement_Report_%s_%s' % (object.agent_id.name.replace(" ", "_"), object.date_to.strftime("%Y-%m-%d"))</field>
+    </record>
+</odoo>
